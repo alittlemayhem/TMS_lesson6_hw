@@ -2,7 +2,7 @@ from getters import get_email, get_password
 from validators import check_email, check_password
 
 
-if __name__ == '__main__':
+def app() -> None:
     while True:
         user_email = get_email()
         if check_email(user_email) is None:
@@ -16,3 +16,7 @@ if __name__ == '__main__':
             break
         else:
             print('Authentication error! Try again.')
+
+
+if __name__ == '__main__':
+    app()
